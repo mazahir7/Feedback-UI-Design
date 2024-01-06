@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	/* changes the 1REM from 16px to 10px */
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	height: 100vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.pannel-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 4rem;
+	box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+	border-radius: 4px;
+	font-size: 1.8rem;
+	max-width: 50rem;
+}
+
+strong {
+	line-height: 1.6;
+}
+
+.reaction-container {
+	display: flex;
+	align-items: center;
+	/* justify-content: space-around; */
+	margin: 2.4rem 0;
+	gap: 3rem;
+}
+
+.reaction-container .emoji {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 1.5rem;
+	width: 12rem;
+	border-radius: 3px;
+	transition: all 0.4s ease;
+	cursor: pointer;
+}
+
+.reaction-container .emoji:hover,
+.reaction-container .emoji.active {
+	box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+}
+
+.emoji img {
+	width: 4rem;
+	height: 4rem;
+	margin-bottom: 1rem;
+}
+
+.emoji small {
+	color: #888;
+	font-size: 1.6rem;
+	font-weight: bold;
+	transition: all 0.4s ease;
+}
+
+/* .emoji:hover .emoji small,
+.emoji.active .emoji small {
+	color: #000;
+} */
+
+.emoji:hover small,
+.emoji.active small {
+	color: #000;
+}
+
+.btn {
+	border: none;
+	background-color: rgba(0, 0, 0, 0.9);
+	color: #fff;
+	margin-top: 1rem;
+	letter-spacing: 1px;
+	font-size: 1.6rem;
+	padding: 0.8rem 1.4rem;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.btn:hover {
+	filter: brightness(130%);
+}
+
+.btn:active {
+	transform: scale(0.98);
+}
+
+.btn:focus,
+.btn:focus-visible {
+	outline: none;
+}
+
+.fa-heart {
+	color: red;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+p {
+	text-align: center;
+	margin: 1.5rem 0;
+	font-weight: 600;
+	color: #333;
+	line-height: 1.6;
+}
+
+@media (max-width: 32em) {
+	.pannel-container {
+		padding: 1rem;
+		font-size: 1.6rem;
+		max-width: 40rem;
+	}
+
+	.reaction-container {
+		gap: 2rem;
+	}
+
+	.reaction-container .emoji {
+		padding: 2rem 1.2rem;
+		width: 10rem;
+	}
+
+	.emoji small {
+		font-size: 1.2rem;
+	}
+}
